@@ -1,0 +1,20 @@
+
+
+{% block title %}
+    login
+{% endblock title %}
+{% block content %}
+<h1>Login...</h1>
+<br/><br>
+<table>
+<div class="form-group">
+<form method='POST'>
+    {% csrf_token %}
+    {{form.as_p}}
+</table>
+  <a href="{% url 'home' %}>"<button type='submit' class="btn btn-secondary">Login</button></a>
+
+</form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,9 @@
+
+
+{% comment %} {% if user.is_authenticated %} {% endcomment %}
+    {% for event in object_list %}
+    <a href="{% url 'eventdetail' event.pk%}"> {{event.title}}</a> 
+        {{event.title}}
+    {% endfor %}
+
+{% comment %} {% endif %} {% endcomment %}
