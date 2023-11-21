@@ -13,10 +13,10 @@
 
 
         
-
-            <a class="nav-link" href="{% url 'addmember' %}">Add Members</a>
-            <a class="nav-link" href="{% url 'addevent' %}">Add Events</a>
-
+          {% if user.is_staff %}
+                <a class="nav-link" href="{% url 'addmember' %}">Add Members</a>
+                <a class="nav-link" href="{% url 'addevent' %}">Add Events</a>
+          {% endif %}
         {% endif %}
 
         <a class="nav-link disabled" aria-disabled="true">Logout</a>
